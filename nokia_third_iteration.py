@@ -1,93 +1,59 @@
-menu = """
-WELCOME
-        
-Select
-    
-1. Phone book
-2. Messages
-3. Chat
-4. Call register
-5. Tones
-6. Settings
-7. Call divert 1
-8. Music
-9. Games
-10. Calculator
-11. Reminders
-12. Clock
-13. Profile
-14. Services
-15. SIM services2
-0. Turn off
-00. Home-Page
-    """
-while True:
-        print (menu)
-        menu_prompt = int(input("Choose an option:")) 
-        match (menu_prompt):
-            case 0 : break
-            case 00 : return
-            case 1 :
-            	def phone_book_menu():
-		            print("Phone book")
-		            phone_book = """
-1. Search
-2. Service Nos. 1
-3. Add name
-4. Erase
-5. Edit
-6. Copy
-7. Assign tone
-8. Send b’card
-9. Options
-10. Speed dials
-11. Voice tags
+def phone_book_menu():
+	            print("Phone book")
+	            phone_book = """
+					1. Search
+					2. Service Nos. 1
+					3. Add name
+					4. Erase
+					5. Edit
+					6. Copy
+					7. Assign tone
+					8. Send b’card
+					9. Options
+					10. Speed dials
+					11. Voice tags
+					0. Back
+					00. Home-Page
+            	"""
+	            while True:
+	                print(phone_book )
+	                phone_book_prompt = input("Choose an option:")
+	                match (phone_book_prompt):
+	                    case "0" : break
+	                    case "00": return
+	                    case "1" : print("Search")
+	                    case "2" : print("Service Nos. 1")
+	                    case "3" : print("Add name")
+	                    case "4" : print("Erase")
+	                    case "5" : print("Edit")
+	                    case "6" : print("Copy")
+	                    case "7" : print("Assign tone")
+	                    case "8" : print("Send b’card")
+	                    case "9" :
+	                        print("Options")
+	                        options = """
+1. Memory in use
+2. Type of view
+3. Memory status
 0. Back
 00. Home-Page
-                """
-		            while True:
-		                print(phone_book )
-		                phone_book_prompt = int(input("Choose an option:"))
-		                match (phone_book_prompt):
-		                    case 0 : break
-		                    case 00: return
-		                    case 1 : print("Search")
-		                    case 2 : print("Service Nos. 1")
-		                    case 3 : print("Add name")
-		                    case 4 : print("Erase")
-		                    case 5 : print("Edit")
-		                    case 6 : print("Copy")
-		                    case 7 : print("Assign tone")
-		                    case 8 : print("Send b’card")
-		                    case 9 :
-		                        print("Options")
-		                        options = """
-	1. Memory in use
-	2. Type of view
-	3. Memory status
-	0. Back
-	00. Home-Page
-		                        """
-		                        while True:
-		                            print(options)
-		                            options_prompt = int(input("Choose an option:"))
-		                            match (options_prompt):
-		                                case 0 : break
-		                                case 00 : return
-		                                case 1 : print("1. Memory in use")
-		                                case 2 : print("Type of view")
-		                                case 3 : print("Memory status")
-		                                case _ : print("Invalid Input")
-		                            if options_prompt == 0:
-		                                break
-		                    case 10 : print("Speed dials")
-		                    case 11 : print("Voice tags")
-		                    case _ : print("Invalid Input")
-		                if phone_book_prompt == 0:
-		                    break
+	                        """
+	                        while True:
+	                            print(options)
+	                            options_prompt = input("Choose an option:")
+	                            match (options_prompt):
+	                                case "0" : break
+	                                case "00" : return
+	                                case "1" : print("Memory in use")
+	                                case "2" : print("Type of view")
+	                                case "3" : print("Memory status")
+	                                case _ : print("Invalid Input")
+	                    case "10" : print("Speed dials")
+	                    case "11" : print("Voice tags")
+	                    case _ : print("Invalid Input")
 
-            case 2 : 
-            	def messages_menu():
+
+def messages_menu():
 		            print("Messages")
 		            messages = """
 1. Write messages
@@ -105,17 +71,17 @@ while True:
                     """
 		            while True:
 		                print(messages)
-		                messages_prompt = int(input("Choose an option:"))
+		                messages_prompt = input("Choose an option:")
 		                match (messages_prompt):
-		                    case 0 : break
-		                    case 00: return
-		                    case 1 : print("Write messages")
-		                    case 2 : print("Inbox")
-		                    case 3 : print("Outbox")
-		                    case 4 : print("Picture messages")
-		                    case 5 : print("Templates")
-		                    case 6 : print("Smileys")
-		                    case 7 : 
+		                    case "0" : break
+		                    case "00": return
+		                    case "1" : print("Write messages")
+		                    case "2" : print("Inbox")
+		                    case "3" : print("Outbox")
+		                    case "4" : print("Picture messages")
+		                    case "5" : print("Templates")
+		                    case "6" : print("Smileys")
+		                    case "7" : 
 		                        print("Message settings")
 		                        messages_settings = """
 	1. Set 12
@@ -125,11 +91,11 @@ while True:
 		            """     
 		                        while True:
 		                            print(messages_settings)
-		                            messages_settings_prompt = int(input("Choose an option:"))
+		                            messages_settings_prompt = input("Choose an option:")
 		                            match (messages_settings_prompt):   
-		                                case 0 : break
-		                                case 00: return
-		                                case 1 : 
+		                                case "0" : break
+		                                case "00": return
+		                                case "1" : 
 		                                    print("Set 12")
 		                                    set_1 = """
 	1. Message centre number
@@ -140,17 +106,15 @@ while True:
 		                                    """
 		                                    while True:
 		                                        print(set_1)
-		                                        set_1_prompt = int(input("Choose an option:"))
+		                                        set_1_prompt = input("Choose an option:")
 		                                        match (set_1_prompt):
-		                                            case 0 : break
-		                                            case 00: return
-		                                            case 1 : print("Search")
-		                                            case 2 : print("Messages sent as")
-		                                            case 3 : print("Message validity")
+		                                            case "0" : break
+		                                            case "00": return
+		                                            case "1" : print("Search")
+		                                            case "2" : print("Messages sent as")
+		                                            case "3" : print("Message validity")
 		                                            case _ : print("Invalid Input")
-		                                        if set_1_prompt == 0:
-		                                            break
-		                                case 2 :    
+		                                case "2" :    
 		                                    print("Common 3")
 		                                    common_3 = """
 	1. Delivery reports
@@ -161,28 +125,21 @@ while True:
 		                                    """
 		                                    while True:
 		                                        print(common_3)
-		                                        common_3_prompt = int(input("Choose an option:"))
+		                                        common_3_prompt = input("Choose an option:")
 		                                        match (common_3_prompt):
-		                                            case 0 : break
-		                                            case 00 : return
-		                                            case 1 : print("Delivery reports")
-		                                            case 2 : print("Reply via same centre")
-		                                            case 3 : print("Character support")
+		                                            case "0" : break
+		                                            case "00" : return
+		                                            case "1" : print("Delivery reports")
+		                                            case "2" : print("Reply via same centre")
+		                                            case "3" : print("Character support")
 		                                            case _ : print("Invalid Input")
-		                                        if common_3_prompt == 0:
-		                                            break
 		                                case _ : print("Invalid Input")
-		                            if messages_settings_prompt == 0:
-		                                break
-		                    case 8 : print("Info service")
-		                    case 9 : print("Voice mailbox number 4")
-		                    case 10 : print("Service command editor")
-		                    case _ : print("Invalid Input")      
-		                if messages_prompt == 0:
-		                    break
-            case 3 : print("Chat")
-            case 4 : 
-            	def call_register_menu():
+		                    case "8" : print("Info service")
+		                    case "9" : print("Voice mailbox number 4")
+		                    case "10" : print("Service command editor")
+		                    case _ : print("Invalid Input")  
+
+def call_register_menu():
 		            print("Call register")
 		            call_register = """
 1. Missed calls
@@ -198,15 +155,15 @@ while True:
         """
 		            while True:
 		                print(call_register)
-		                call_register_prompt = int(input("Choose an option:"))
+		                call_register_prompt = input("Choose an option:")
 		                match (call_register_prompt):
-		                    case 0 : break
-		                    case 00: return
-		                    case 1 : print("Missed calls")
-		                    case 2 : print("Received calls")
-		                    case 3 : print("Dialled numbers")
-		                    case 4 : print("Erase recent call lists")
-		                    case 5 : 
+		                    case"0" : break
+		                    case "00": return
+		                    case "1" : print("Missed calls")
+		                    case "2" : print("Received calls")
+		                    case "3" : print("Dialled numbers")
+		                    case "4" : print("Erase recent call lists")
+		                    case "5" : 
 		                        print("Show call duration")
 		                        show_call_duration = """
 	1. Last call duration
@@ -219,19 +176,18 @@ while True:
 		                        """
 		                        while True:
 		                            print(show_call_duration)
-		                            show_call_duration_prompt = int(input("Choose an option:"))
+		                            show_call_duration_prompt = input("Choose an option:")
 		                            match (show_call_duration_prompt):
-		                                case 0 : break
-		                                case 00: return
-		                                case 1 : print("Last call duration")
-		                                case 2 : print("All calls’ duration")
-		                                case 3 : print("Received calls’ duration")
-		                                case 4 : print("Dialled calls’ duration")
-		                                case 5 : print("Clear timers")
+		                                case "0" : break
+		                                case "00": return
+		                                case "1" : print("Last call duration")
+		                                case "2" : print("All calls’ duration")
+		                                case "3" : print("Received calls’ duration")
+		                                case "4" : print("Dialled calls’ duration")
+		                                case "5" : print("Clear timers")
 		                                case _ : print("Invalid Input")        
-		                            if show_call_duration_prompt == 0:
-		                                break
-		                    case 6 : 
+		                           
+		                    case "6" : 
 		                        print("Show call costs")
 		                        show_call_costs = """
 	1. Last call cost
@@ -242,17 +198,16 @@ while True:
 		                        """
 		                        while True:
 		                            print(show_call_costs)
-		                            show_call_costs_prompt = int(input("Choose an option:"))
+		                            show_call_costs_prompt = input("Choose an option:")
 		                            match (show_call_costs_prompt):
-		                                case 0 : break
-		                                case 00: return
-		                                case 1 : print("Last call cost")
-		                                case 2 : print("All calls’ cost")
-		                                case 3 : print("Clear counters")
+		                                case "0" : break
+		                                case "00": return
+		                                case "1" : print("Last call cost")
+		                                case "2" : print("All calls’ cost")
+		                                case "3" : print("Clear counters")
 		                                case _ : print("Invalid Input")
-		                            if show_call_costs_prompt == 0:
-		                                break
-		                    case 7 : 
+		                           
+		                    case "7" : 
 		                        print("Call cost settings")
 		                        call_cost_settings = """
 	1. Call cost limit
@@ -262,23 +217,18 @@ while True:
 		                        """
 		                        while True:
 		                            print(call_cost_settings)
-		                            call_cost_settings_prompt = int(input("Choose an option:"))
+		                            call_cost_settings_prompt = input("Choose an option:")
 		                            match (call_cost_settings_prompt):
-		                                case 0 : break
-		                                case 00: return
-		                                case 1 : print("Call cost limit")
-		                                case 2 : print("Show costs in")
+		                                case "0" : break
+		                                case "00": return
+		                                case "1" : print("Call cost limit")
+		                                case "2" : print("Show costs in")
 		                                case _ : print("Invalid Input")
-		                            if call_cost_settings_prompt == 0:
-		                                break
-		                    case 8 : print("Prepaid credit")
+		                           
+		                    case "8" : print("Prepaid credit")
 		                    case _ : print("Invalid Input")
-		                if call_register_prompt == 0:
-		                    break
 
-
-            case 5 : 
-            	def tones_menu():
+def tones_menu():
 		            print("Tones")
 		            tones = """
 1. Ringing tone
@@ -294,24 +244,22 @@ while True:
         """
 		            while True:
 		                print(tones)
-		                tones_prompt = int(input("Choose an option:"))
+		                tones_prompt = input("Choose an option:")
 		                match (tones_prompt):
-		                    case 0 : break
-		                    case 00: return
-		                    case 1 : print("Ringing tone")
-		                    case 2 : print("Ringing volume")
-		                    case 3 : print("Incoming call alert")
-		                    case 4 : print("Message alert tone")
-		                    case 5 : print("Keypad tones")
-		                    case 6 : print("Warning tones")
-		                    case 7 : print("Vibrating alert")
-		                    case 8 : print("Screen saver")
+		                    case "0" : break
+		                    case "00": return
+		                    case "1" : print("Ringing tone")
+		                    case "2" : print("Ringing volume")
+		                    case "3" : print("Incoming call alert")
+		                    case "4" : print("Message alert tone")
+		                    case "5" : print("Keypad tones")
+		                    case "6" : print("Warning tones")
+		                    case "7" : print("Vibrating alert")
+		                    case "8" : print("Screen saver")
 		                    case _ : print("Invalid Input")
-		                if tones_prompt == 0:
-		                    break
-
-            case 6 : 
-            	def settings_menu():
+		                    
+		             
+def settings_menu():
 		            print("Settings")
 		            settings = """
 1. Call settings
@@ -323,11 +271,11 @@ while True:
         """
 		            while True:
 		                print(settings)
-		                settings_prompt = int(input("Choose an option:"))
+		                settings_prompt = input("Choose an option:")
 		                match (settings_prompt):
-		                    case 0 : break
-		                    case 00: return
-		                    case 1 : 
+		                    case "0" : break
+		                    case "00": return
+		                    case "1" : 
 		                        print("Call settings")
 		                        call_settings = """
 	1. Automatic redial
@@ -341,21 +289,19 @@ while True:
 		        """
 		                        while True:
 		                            print(call_settings)
-		                            call_settings_prompt = int(input("Choose an option:"))
+		                            call_settings_prompt = input("Choose an option:")
 		                            match (call_settings_prompt):
-		                                case 0 : break
-		                                case 00: return
-		                                case 1 : print("Automatic redial")
-		                                case 2 : print("Speed dialling")
-		                                case 3 : print("Call waiting options")
-		                                case 4 : print("Own number sending")
-		                                case 5 : print("Phone line in use")
-		                                case 6 : print("Automatic answer 1")
+		                                case "0" : break
+		                                case "00": return
+		                                case "1" : print("Automatic redial")
+		                                case "2" : print("Speed dialling")
+		                                case "3" : print("Call waiting options")
+		                                case "4" : print("Own number sending")
+		                                case "5" : print("Phone line in use")
+		                                case "6" : print("Automatic answer 1")
 		                                case _ : print("Invalid Input")
-		                            if call_settings_prompt == 0:
-		                                break
-
-		                    case 2 : 
+		                
+		                    case "2" : 
 		                        print("Phone settings")
 		                        phone_settings = """
 	1. Language
@@ -368,20 +314,19 @@ while True:
 		        """
 		                        while True:
 		                            print(phone_settings)
-		                            phone_settings_prompt = int(input("Choose an option:"))
+		                            phone_settings_prompt = input("Choose an option:")
 		                            match (phone_settings_prompt):
-		                                case 0 : break
-		                                case 00: return
-		                                case 1 : print("Language")
-		                                case 2 : print("Cell info display")
-		                                case 3 : print("Welcome note")
-		                                case 4 : print("Network selection")
-		                                case 5 : print("Confirm SIM service actions")
+		                                case "0" : break
+		                                case "00": return
+		                                case "1" : print("Language")
+		                                case "2" : print("Cell info display")
+		                                case "3" : print("Welcome note")
+		                                case "4" : print("Network selection")
+		                                case "5" : print("Confirm SIM service actions")
 		                                case _ : print("Invalid Input")
-		                            if phone_settings_prompt == 0:
-		                                break
+		                            
 		                    
-		                    case 3 : 
+		                    case "3" : 
 		                        print("Security settings")
 		                        security_settings = """
 	1. PIN code request
@@ -395,26 +340,21 @@ while True:
 		        """
 		                        while True:
 		                            print(security_settings)
-		                            security_settings_prompt = int(input("Choose an option:"))
+		                            security_settings_prompt = input("Choose an option:")
 		                            match (security_settings_prompt):
-		                                case 0 : break
-		                                case 00: return
-		                                case 1 : print("PIN code request")
-		                                case 2 : print("Call barring service")
-		                                case 3 : print("Fixed dialling")
-		                                case 4 : print("Closed user group")
-		                                case 5 : print("Security level")
-		                                case 6 : print("Change access codes1")
+		                                case "0" : break
+		                                case "00": return
+		                                case "1" : print("PIN code request")
+		                                case "2" : print("Call barring service")
+		                                case "3" : print("Fixed dialling")
+		                                case "4" : print("Closed user group")
+		                                case "5" : print("Security level")
+		                                case "6" : print("Change access codes1")
 		                                case _ : print("Invalid Input")
-		                            if security_settings_prompt == 0:
-		                                break
-		                    case 4 : print("Restore factory settings")
+		                            
+		                    case "4" : print("Restore factory settings")
 		                    case _ : print("Invalid Input")
-		                if settings_prompt == 0:
-		                    break
-            case 7 : print("Call divert 1")
-            case 8 : 
-            	def music_menu():
+def music_menu():
 		            print("Music")
 		            music = """
 1. Music player
@@ -426,22 +366,17 @@ while True:
         """
 		            while True:
 		                print(music)
-		                music_prompt = int(input("Choose an option:"))
+		                music_prompt = input("Choose an option:")
 		                match (music_prompt):
-		                   case 0 : break
-		                   case 00: return
-		                   case 1 : print("Music player")
-		                   case 2 : print("Radio")
-		                   case 3 : print("Recorder")
-		                   case 4 : print("Track list")
+		                   case "0" : break
+		                   case "00": return
+		                   case "1" : print("Music player")
+		                   case "2" : print("Radio")
+		                   case "3" : print("Recorder")
+		                   case "4" : print("Track list")
 		                   case _ : print("Invalid Input")
-		                if music_prompt == 0:
-		                    break
-            case 9 : print("Games")
-            case 10 : print("Calculator")
-            case 11 : print("Reminders")
-            case 12 : 
-            	def clock_menu():
+
+def clock_menu():
 		            print("Clock")
 		            clock = """
 1. Alarm clock
@@ -455,22 +390,60 @@ while True:
         """
 		            while True:
 		                print(clock)
-		                security_settings_prompt = int(input("Choose an option:"))
+		                security_settings_prompt = input("Choose an option:")
 		                match (security_settings_prompt):
-		                    case 0 : break
-		                    case 00: return
-		                    case 1 : print("Alarm clock")
-		                    case 2 : print("Clock settings")
-		                    case 3 : print("Date setting")
-		                    case 4 : print("Stopwatch")
-		                    case 5 : print("Countdown timer")
-		                    case 6 : print("Auto update of date and time")
+		                    case "0" : break
+		                    case "00": return
+		                    case "1" : print("Alarm clock")
+		                    case "2" : print("Clock settings")
+		                    case "3" : print("Date setting")
+		                    case "4" : print("Stopwatch")
+		                    case "5" : print("Countdown timer")
+		                    case "6" : print("Auto update of date and time")
 		                    case _ : print("Invalid Input")
-		                if security_settings_prompt == 0:
-		                    break
-            case 13 : print("Profiles")
-            case 14 : print("Services")
-            case 15 : print("SIM services2")
+menu = """
+WELCOME
+        
+[Select]
+    
+1. Phone book
+2. Messages
+3. Chat
+4. Call register
+5. Tones
+6. Settings
+7. Call divert 1
+8. Music
+9. Games
+10. Calculator
+11. Reminders
+12. Clock
+13. Profile
+14. Services
+15. SIM services2
+0. Turn off
+    """
+while True:
+        print (menu)
+        menu_prompt = input("Choose an option:") 
+        match (menu_prompt):
+            case "0" : break
+            case "1" : phone_book_menu()
+            case "2" : messages_menu()	                
+            case "3" : print("Chat")
+            case "4" : call_register_menu()
+            case "5" : tones_menu()
+            case "6" : settings_menu()         
+            case "7" : print("Call divert 1")
+            case "8" : music_menu()	               
+            case "9" : print("Games")
+            case "10" : print("Calculator")
+            case "11" : print("Reminders")
+            case "12" : clock_menu()		               
+            case "13" : print("Profiles")
+            case "14" : print("Services")
+            case "15" : print("SIM services2")
             case _ : print("Invalid Input")
-        if menu_prompt == 0:
-            break
+  
+  
+
